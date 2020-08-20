@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiquidMetrixTest", "LiquidMetrixTest\LiquidMetrixTest.csproj", "{9C1A719E-CD61-48D8-9D28-B8D3917B83B5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rover.Model", "Rover.Model\Rover.Model.csproj", "{F1001E41-974E-4E4E-8A47-53BE10A19B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoverSoftware.Test", "RoverSoftware.Test\RoverSoftware.Test.csproj", "{D9995414-FF40-46BB-B2AC-B4DCDF128B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9C1A719E-CD61-48D8-9D28-B8D3917B83B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C1A719E-CD61-48D8-9D28-B8D3917B83B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C1A719E-CD61-48D8-9D28-B8D3917B83B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1001E41-974E-4E4E-8A47-53BE10A19B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1001E41-974E-4E4E-8A47-53BE10A19B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1001E41-974E-4E4E-8A47-53BE10A19B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1001E41-974E-4E4E-8A47-53BE10A19B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9995414-FF40-46BB-B2AC-B4DCDF128B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9995414-FF40-46BB-B2AC-B4DCDF128B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9995414-FF40-46BB-B2AC-B4DCDF128B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9995414-FF40-46BB-B2AC-B4DCDF128B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
