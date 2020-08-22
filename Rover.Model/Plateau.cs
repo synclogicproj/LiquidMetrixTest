@@ -41,13 +41,13 @@ namespace Rover.Model
         private void GuardArea(ICommandableRover rover, int x, int y)
         {
             if (x > _xUpperBound || y > _xUpperBound)
-                throw new ApplicationException($"Attempt to move at position [{x},{y},{rover.GetCurrenctDirection()}], {rover.Name} cannot move outside platue area {_xUpperBound}x{_yUpperBound}");
+                throw new ApplicationException($"Attempt to move at position [{x},{y},{rover.CurrenctDirection}], {rover.Name} cannot move outside platue area {_xUpperBound}x{_yUpperBound}");
 
             if (x < 0 || y < 0)
-                throw new ApplicationException($"Attempt to move at position [{x},{y},{rover.GetCurrenctDirection()}], {rover.Name}  cannot must stay within platue area {_xUpperBound}x{_yUpperBound}");
+                throw new ApplicationException($"Attempt to move at position [{x},{y},{rover.CurrenctDirection}], {rover.Name}  cannot must stay within platue area {_xUpperBound}x{_yUpperBound}");
 
             if (_surfaceArea[x, y] != null)
-                throw new ApplicationException($"{_surfaceArea[x, y].Name} rover is stationed at [{x},{y},{rover.GetCurrenctDirection()}]. Take a different route!");
+                throw new ApplicationException($"{_surfaceArea[x, y].Name} rover is stationed at [{x},{y},{rover.CurrenctDirection}]. Take a different route!");
         }
 
     }

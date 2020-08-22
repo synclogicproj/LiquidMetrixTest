@@ -3,8 +3,10 @@
     public interface ICommandableRover
     {
         string Name { get; set; }
-        void SetPosition(int x, int y, char direction);
+        int CurrentXPos { get; }
+        int CurrentYPos { get; }
+        RoverDirections CurrenctDirection { get; }
+        void SetPosition(int x, int y, RoverDirections direction);
         string Move(string commands);
-        char GetCurrenctDirection();
     }
 }

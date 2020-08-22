@@ -9,8 +9,9 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddRoverServices(this IServiceCollection services)
         {
-            services.AddScoped<IPlateau, Plateau>();
-            services.AddScoped<ICommandableRover, MarsRover>();
+            services.AddSingleton<IPlateau, Plateau>();
+            services.AddTransient<ICommandableRover, MarsRover>();
+            services.AddScoped<IRoverMovementHandlerFactory, RoverMovementHandlerFactory>();
 
             return services;
         }

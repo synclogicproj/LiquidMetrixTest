@@ -23,17 +23,17 @@ namespace RoverSoftware.Test
         {
             var commandableRover = _serviceProvider.GetService<ICommandableRover>();
             commandableRover.Name = "Rover1";
-            commandableRover.SetPosition(10, 10, 'N');
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
 
             string position = commandableRover.Move("R1R3L2L1");
             Assert.AreEqual<string>("[13, 8, N]", position);
 
-            commandableRover.SetPosition(10, 10, 'N');
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
 
             string position1 = commandableRover.Move("L6R6L1");
             Assert.AreEqual<string>("[3, 16, W]", position1);
 
-            commandableRover.SetPosition(10, 10, 'N');
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
 
             string position3 = commandableRover.Move("L10R11");
             Assert.AreEqual<string>("[0, 21, N]", position3);
@@ -44,7 +44,7 @@ namespace RoverSoftware.Test
         {
             var commandableRover = _serviceProvider.GetService<ICommandableRover>();
             commandableRover.Name = "Rover1";
-            commandableRover.SetPosition(10, 10, 'N');
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
 
             Assert.ThrowsException<ApplicationException>(() => commandableRover.Move("R1R50"));
         }
@@ -54,7 +54,7 @@ namespace RoverSoftware.Test
         {
             var commandableRover = _serviceProvider.GetService<ICommandableRover>();
             commandableRover.Name = "Rover1";
-            commandableRover.SetPosition(10, 10, 'N');
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
 
             Assert.ThrowsException<ApplicationException>(() => commandableRover.Move("L90R20"));
         }
