@@ -40,6 +40,17 @@ namespace RoverSoftware.Test
         }
 
         [TestMethod]
+        public void Move_Rover_Multiple_Times_In_The_Platue_Test()
+        {
+            var commandableRover = _serviceProvider.GetService<ICommandableRover>();
+            commandableRover.Name = "Rover1";
+            commandableRover.SetPosition(10, 10, RoverDirections.North);
+
+            Assert.AreEqual<string>("[13, 8, N]", commandableRover.Move("R1R3L2L1"));
+            Assert.AreEqual<string>("[16, 6, N]", commandableRover.Move("R1R3L2L1"));
+        }
+
+        [TestMethod]
         public void One_Rover_In_The_Platue_Outside_YBoundary_Test()
         {
             var commandableRover = _serviceProvider.GetService<ICommandableRover>();
